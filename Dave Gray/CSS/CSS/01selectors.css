@@ -1,0 +1,49 @@
+
+*{ 
+    
+    border: 3px solid red;
+    
+}
+html{
+    font-size: 22px;
+    border: 3px solid black;
+}
+body{
+    background-color: blueviolet;
+}
+main{
+    font-family: monospace;
+}
+
+button, input, textarea, select{
+    font:inherit;
+}
+
+h1, h2{
+    color: blue;
+}
+
+
+p{
+    color: purple;
+}
+
+p span{
+    text-transform: uppercase;
+    color: red;
+    background-color: gold;
+}
+
+.highlight{
+  
+    color: blue;
+    
+}
+
+.gray{
+    color: grey;
+}
+
+#second {
+    font-style: italic;
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+
+body{
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: 'Roboto','sans-serif';
+    line-height: 2rem;    
+}
+
+ol{
+    /* list-style-type: lower-alpha; lowercase letters (a,b,c,d,....) */
+
+    /* list-style-type: tamil; aala poraan tamilan */
+
+    /* list-style-type: decimal-leading-zero; Eg. 01,02,03,04,....*/
+
+    /* list-style-type: none;  */
+
+    /* list-style-type: disc; its valid to use disc, bullet , square  ..but dont use them in ordered list.. */
+
+    list-style-type: upper-roman; /*Roman letters*/
+    padding: 0;
+    
+}
+
+ul{
+    /* list-style-type: decimal; its valid use decimal, roman ,alpha in unordered list, but dont use them  */
+    list-style-type: square;
+
+    text-align: center;
+
+    list-style-position: outside;
+    color: blue;
+    line-height: 1.6;
+    list-style-position: inside;
+    /* list-style-image: url('/IMAGES/check.png');
+
+    /* in the below the square is overrided by image...if image cant be loaded square is used...The 'inside' describes the position */
+    /* list-style: square url('/IMAGES/check.png') inside;    */ 
+}
+
+/* use the ul or ol before li to specify which tag to use...Also use 'nth-child' pesudocode class to choose a particular element in the list..in child we can also use odd and even for zebra styling */
+ul li:nth-child(2){
+    color:red;
+}
+ol li:nth-child(odd){
+    color:red;
+}
+
+/* marker is a pesudo element.. Used to change the property of marker of the list elements.
+Marker means the decimal, discs, alpha ..etc used in list style */
+
+/* ::marker{ this chooses both ol and ul
+    color:red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only 5 dollors-->"; even is list-style is none..'content' will be added in the marker
+} */
+ul ::marker{
+    color:red;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "Only 5 dollors-->";
+}
+
+

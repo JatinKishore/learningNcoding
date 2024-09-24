@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+/* Float does not behave with the parent 
+The are used to place elements over the body*/
+body{    
+    font-size: 1.5rem;
+    font-family: 'Roboto','sans-serif';    
+}
+
+.block{
+    width: 30vw;
+    height: 30vw;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/* while applying float flushing of paragrah takes place over the floating div.. to give space use margin for the floating div */
+.left{
+    float:left;
+    margin-right: 1rem;
+}
+.right{
+    float:right;
+    margin-left: 1rem;
+}
+/* p{
+    margin-left: 10px;
+    /* applying margin on the paragraph won't change the flushing of paragraph over the floating div */
+/* }  */
+
+.clear{
+    /* clear removes the float */
+    clear: both;
+}
+section{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 1rem;
+    /* Since float never adjust itself with the parent and performs overflow..
+    to avoid this use 'overflow:auto' */
+    overflow: auto;
+
+    /* another method to avoid overflow is 'display:flow-root' */
+    display: flow-root;
+}

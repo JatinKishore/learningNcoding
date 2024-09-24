@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{    
+    font-size: 1.5rem;
+    font-family: 'Roboto','sans-serif';    
+    min-height: 100vh;
+    padding: 20px;
+    border: 20px solid black;
+    
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto ;
+    border: 1px solid black;
+    display: flex;
+
+    
+
+    /* Using Flex, now each item within the container is considered to be items */
+    /* justify-content moves items in left to right approach */
+    justify-content: flex-start;/*  default state , relay on left side */
+    justify-content: flex-end;/*  now items relay on right side */    
+    justify-content: center;/*  items relay on center */
+    gap: 1rem;/* gap produce gap between each item */    
+    justify-content: space-around; /* have proper space around the items */
+    justify-content: space-between; /*have equal space between the items */
+    justify-content: space-evenly;/* have equal space between and around the items */
+    justify-content: space-evenly;
+
+    /* align-items: flex-start; default in top */
+    /* align items move items in top to bottom approach */
+    /* align-items: flex-end;relay on the bottom */
+    
+    align-items: center;
+    
+    flex-direction: column;
+    /* Now the items will be stacked as column
+    Now 
+        align-items ->  works in left to right approach
+        justify-content -> works in top to bottom appraoch*/
+
+    align-items: flex-start;
+
+    flex-direction: row;/*default flex state i.e as a row*/
+
+    flex-direction: column-reverse;/*  reversed column */
+    flex-direction: row-reverse; /* row is reversed */
+    flex-direction: row;
+    flex-wrap: wrap ; /*in default flex won't resize with respect to the screen to do that use flex-wrap */
+    /* flex-wrap: wrap-reverse; the extra contents in the additional line due to wrap are reversed */
+    flex-flow:row wrap;/* combining both flex-direction and flex-wrap using flex-flow */
+    
+    /*This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. 
+    When there is only one line, align-content has no effect.*/
+    
+    align-content: center;/* align content will work only if there is flex wrap..also it has higher prioity than others */
+    
+    
+}   
+
+
+.box{
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;/*The items will grow to fill up the space in the container */
+    flex-basis: 100px;/* to give a minimum size for the item.But during flex-grow or shrink it reduces or increases respectively..Since Usually if no min-width given content takes the width of the content */
+
+    flex-shrink: 1;/*Shrink is opposite of grow. But works in no-wrap state.Our box will shrink as much as possible */
+    /* flex: 1 1 250px; This combines  GROW SHRINK BASIS repectively into one as flex */
+    flex: 1 1 100px;
+    
+}
+.box:nth-child(2){
+    flex-grow: 1;/*Now box 2 will grow twice of box 1..(i.e) 1:2 ratio.. */
+    flex-shrink: 5;/* Now box 2 will shrink twice of box 1..(i.e) 1:2 ratio..*/
+    /* align-self & justif-self has similar property as  align and justify but for a specific box or class of boxes */
+    align-self: flex-end;
+    justify-self: center;
+    order: -1;/*Change the place of the box in the container */
+}

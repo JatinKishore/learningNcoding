@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{    
+    font-size: 1.5rem;
+    font-family: 'Roboto','sans-serif';    
+    height: 200vh;
+}
+
+.outer-container{
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    /* The below relative is used by absloute position..and now this container stands as its parent */
+    position: relative;
+}
+
+.inner-container{
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    /* Due to precidence ,The below relative is used by absloute position..and now this container stands as its parent */
+    /* position: relative; */
+}
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    padding: 1rem;
+    
+}
+
+.absolute{
+    /* absolute position needs a parent with position relative for relative position..if not available it takes the realtive position of the browser window */
+    background-color: blue;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    /* left: -10000px; if your in need of a element to be removed from the browse but still you need them for some reason ..just position it in absoulte and give it a random offset value..It wont be shown in the browser but still screen reader reads it */
+    /* the z-index place a div over other divs */
+    z-index:1;
+}
+
+.relative{
+    background-color: red;
+    /* This is similar to absolute but no need of defining relative position in the parent...Because it wont be realtive to any parent..It is realtive form its normal position */
+    position: relative;
+    top: 300px;
+    left: 100px;
+    
+}
+
+.fixed{
+    /* It is fixed in the browser window, even drag or scroll it reamains in its position..Also it does dependent upon parent elements ..It offset its values based on the browser.
+    i.e setting top:1rem.. means positioning the div element 1rem from top */
+    background-color: green;
+    position: fixed;
+    top: 100px;
+    
+}
+
+.sticky{
+    background-color: black;
+    position: sticky;
+    /* The sticky div sticks in 200px..when we scroll and the sticky div reaches top 0px..it sticks in that till each reach the bottom of its parent container.. */
+    top: 0px;
+}
+
+/* The below code is for a mini project using position */
+
+html{
+    /* When moving from one element to other using hyperlinks with in a document
+    By using 'scroll-behavior:smooth' in html tag can make it smooth  */
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+}
+
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+
+header, footer{
+    color: white;
+    text-align: center;
+    height: 100px;
+    
+
+}
+
+header{
+    position: sticky;
+    top:0;
+    font-size: 5rem;
+    
+}
+
+footer{
+    background-color: black;    
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+    font-size: 3rem;
+}
+
+a{
+    color: white;
+}
+
+.social{
+    background-color: royalblue;
+    color: whitesmoke;
+    /* inherit inhertis the properites of the parents.. Since its a button element..in default it wont inherit any properites */
+    font-size: inherit;
+    padding:1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;    
+}
+  

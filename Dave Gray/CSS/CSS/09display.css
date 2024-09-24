@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+/* 
+'display:block'
+By default p,h1-h6 tags has block level display
+BLOCK -> covers complete given width and allows margin,height and padding, it wont overlap with other elements.
+        the direction of block is downwards
+
+
+'display:inline'
+whereas  span and a tag has inline display
+INLINE -> covers only the content and allows only padding, it overlaps other elements
+        the dirextion of inline is left to right
+        inline  is used where to convert an anchor tag to a button and vertical list into an horizontal nav bar
+
+'display : none' -> is used to remove from display , But there is no use 
+
+we can convert inline to block and vice versa using
+
+display: inline-block
+*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-size: 2rem;
+    font-family: 'Roboto','sans-serif';
+    
+}
+
+p{
+    background-color: lightgray;
+    margin: 100px 50px;
+}
+
+main{
+    background-color: blue;
+    width: 50%;
+}
+
+.opposite{
+    display: inline-block;
+    background-color: #333;
+    color: whitesmoke;
+    margin-top: 100px;
+    height: 200px;
+    padding: 4rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0.5rem;
+    text-align: right;
+    background-color: black;    
+}
+
+li{
+    display: inline-block;
+    /* in default li is block level and covers all the width changing it to inline helps to take only content space within nav bar */
+    margin-inline: 0.5rem;
+    /* margin-inline applies margin left and right */
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    text-decoration: underline;
+    
+}

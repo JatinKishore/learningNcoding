@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+body{
+    padding: 10%;
+    font-size: 2rem;
+    font-family: 'Roboto','sans-serif';
+    line-height: 3rem;
+    
+}
+
+a{
+    /* text-decoration: underline; default*/
+    text-decoration: none;
+    /* cursor: pointer; default */
+    /* cursor: not-allowed; the links got blocked */
+    color: hsl(200, 48%, 55%);
+    
+    
+    
+}
+
+/* Pesudocodes classes have more specificity than ordinary tags..So they needs to be added after ordinary tags..*/
+/* a:visited{ */
+    /*visited means after clicking the link , the color of link changes  */
+    /* color: purple; */
+/* } */
+
+a:hover, a:focus{
+    /* focus is used to improve assessibilty ..for users who use screen reader */
+    /* we can use hsl color type and slighty change the first property , to have the same color with slight lighter version in hover */
+    color: hsl(189, 48%, 55%,0.5);
+    /* opacity: 0.5; opacity can be directly into the hsl as 4th property */
+}
+
+ a:active{
+     /*active means while clicking the link , the color of link changes  for a while*/
+    color: red;
+}

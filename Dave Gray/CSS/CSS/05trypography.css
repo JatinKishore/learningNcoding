@@ -1,0 +1,48 @@
+/* Typography is the way that the text is aligned and presented */
+
+/* Due to inheritence all the child elements h1,p inherits the font properties of parent(body), but button and inputs wont inheirt them */
+
+/* The below line is to link font from google.. instead of having font link in the head section fo the html we can have it in the style page */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=VT323&display=swap');
+
+body{
+    padding: 25%;
+    font-size: 2rem;
+}
+
+/* to make input and button to inheritence to its parent  , use inherit   */
+input, button{
+    font: inherit;
+}
+
+p{
+    /* text-decoration: underline; */
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: none; */
+    /* text-transform: capitalize; */
+    /* text-transform: lowercase; */
+    /* text-transform: uppercase; */
+    /* text-align: left; This is the default one*/ 
+    /* text-align: justify; */
+    /* text-align: right; now uniform on right */
+    /* text-indent: 2em; it intends the first line */
+    /* line-height: 1.5; line space between each line , This helps in readability*/
+    /* letter-spacing: 0.5em; space between letters, This helps in attention grabing */
+    /* word-spacing: 0.5em; space between words*/
+
+    /* font-weight:900; it ranges form 100-900..where 300-400 its the normal text...but less than that is lighter, more than that it gets bold and bolder */
+    /* font-style: italic; */
+    /* font-style: oblique; italics with more emphasis */
+    /* font-style: normal; the default */
+    /* font-family: serif; it is the default font family */
+    /* font-family: sans-serif; */
+    /* font-family: monospace; each character has equal space */
+    /* 'courier new' (font  name with more than two words needs to be enclosed in a '') */
+    /* font-family: 'Courier New', Courier, monospace; the browser seaches for 'courier new', if not found seach for courier and then for monospace  */
+    
+    /* The below font is taken from google fonts..*/
+    font-family: 'Roboto', sans-serif;
+    font-family: 'VT323', monospace;
+
+}
